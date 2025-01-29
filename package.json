@@ -1,0 +1,14 @@
+{
+  "name": "diceroller",
+  "version": "1.0.0",
+  "description": "diceroller app for ss website bg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "darryl",
+  "license": "ISC",
+  "dependencies": {
+    "pixi.js": "^6.1.2"
+  }
+}

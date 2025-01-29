@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting Card</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.4/browser/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <script src="./js/grid.js"></script>
+    <script src="./js/block.js"></script>
+    <script src="./js/toon.js"></script>
+    <script src="./js/ticker.js"></script>
+    <script src="./js/recurringTimer.js"></script>
+    <script type="module" src="./js/script.js"></script>
+
+    <div style="position: relative">
+      <!-- Contains in-game top menu -->
+      <div class="topMenuContainer">
+        <div class="topMenuInnerContainer">
+          <img id="scoreBarContainer" />
+          <div id="scoreProgress">
+            <div id="scoreBar">
+              <div id="scoreBarGreyReflection">
+                <div id="lightReflectionContainer">
+                  <div id="smallReflection"></div>
+                  <div id="bigReflection"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 id="score">0/20</h3>
+        </div>
+      </div>
+
+      <div id="canvas">
+        <div id="landingPage">
+          <div class="landingPageInnerContainer">
+            <img
+              id="landingStart"
+              class="landingBtn"
+              src="./images/landingpage_assets/asset-2.png"
+            />
+
+            <img
+              id="landingHowTo"
+              class="landingBtn"
+              src="./images/landingpage_assets/asset-1.png"
+            />
+          </div>
+        </div>
+
+        <div id="howToPage">
+          <div class="howToPageInnerContainer">
+            <img id="howToPlayLogo" src="./images/masthead_mobile.png" />
+
+            <div id="howToPlayTitleContainer">
+              <p id="howToText">HOW TO PLAY</p>
+            </div>
+
+            <div id="arrowContainer">
+              <div id="prevarrow" class="howToPlayArrow">
+                <p id="howToText">&#10094;</p>
+              </div>
+
+              <div id="nextarrow" class="howToPlayArrow">
+                <p id="howToText">&#10095;</p>
+              </div>
+            </div>
+
+            <!-- <div class="slideshow-container2"> -->
+            <div class="mySlides fade">
+              <img class="howtoplayimg" src="./images/howtoplay_assets/1.png" />
+              <div class="text">
+                Help Dice, our Start Something mascot, collect gifts falling
+                from the sky!
+              </div>
+              <div class="numbertext">1 of 3 pages</div>
+            </div>
+
+            <div class="mySlides fade">
+              <img
+                class="howtoplayimg"
+                src="./images/howtoplay_assets/howtobtn.gif"
+              />
+              <div class="text">
+                Use the buttons to move Dice to the right positions to catch
+                them!
+              </div>
+              <div class="numbertext">2 of 3 pages</div>
+            </div>
+
+            <div class="mySlides fade">
+              <img class="howtoplayimg" src="./images/howtoplay_assets/3.png" />
+              <div class="text">
+                Watch out for coal though! You’ve been good this year, so you
+                don’t deserve it.
+              </div>
+              <div class="numbertext">3 of 3 pages</div>
+            </div>
+            <!-- </div> -->
+            <br />
+          </div>
+        </div>
+
+        <div id="gameOverOverlay">
+          <div id="gameOverOverlayInner">
+            <div id="innerFullscreenModal" class="divPositioning">
+              <img id="gameoverTitle" src="./images/masthead_mobile.png" />
+              <div id="tofromContainer">
+                <p id="greetingFrom">FROM:</p>
+                <p id="greetingTo">TO:</p>
+              </div>
+              <!-- <div id="greetingScroll"> -->
+              <p id="greetingMessage">Happy holidays!</p>
+              <!-- </div> -->
+            </div>
+
+            <!-- Replace with actual card builder link before deployment -->
+            <div class="divPositioningRow">
+              <div class="createCardContainer">
+                <a
+                  id="makeCard2"
+                  class="createCardBtn"
+                  href="https://greetings.startsomething.sg/christmas-order"
+                  >MAKE YOUR OWN CARD!</a
+                >
+              </div>
+
+              <div class="createCardContainer">
+                <a
+                  id="visitSS"
+                  class="createCardBtn"
+                  href="https://startsomething.sg/"
+                  >VISIT US</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="startTextOverlay">
+          <div class="centerContainer">
+            <h1 id="startTimerText">5</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottomNavContainer">
+        <button id="navLeftBtn" class="navButton">
+          <img id="navLeftBtnImg" class="navButtonImg" />
+        </button>
+
+        <button id="navCenterBtn" class="navButton">
+          <img id="navCenterBtnImg" class="navButtonImg" />
+        </button>
+
+        <button id="navRightBtn" class="navButton">
+          <img id="navRightBtnImg" class="navButtonImg" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
