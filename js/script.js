@@ -33,14 +33,14 @@ window.onload = function () {
 
   //Gameplay bgm
   const bgAudio = new Howl({
-    src: ["/christmas-card/sounds/bgm.mp3"],
+    src: ["/sounds/bgm.mp3"],
     loop: true,
     volume: 0.5,
   });
 
   //Collect gift sound effect
   const collectSound = new Howl({
-    src: ["/christmas-card/sounds/collect.mp3"],
+    src: ["/sounds/collect.mp3"],
     autoplay: false,
     loop: false,
     volume: 0.7,
@@ -48,7 +48,7 @@ window.onload = function () {
 
   //Collision sound effect
   const collideSound = new Howl({
-    src: ["/christmas-card/sounds/collide.mp3"],
+    src: ["/sounds/collide.mp3"],
     autoplay: false,
     loop: false,
     volume: 0.3,
@@ -195,21 +195,21 @@ window.onload = function () {
   function landingBackground() {
     const bgImages = [
       {
-        bg: "/christmas-card/images/landingpage_assets/asset-3.png",
-        startBtn: "/christmas-card/images/landingpage_assets/asset-2.png",
-        howBtn: "/christmas-card/images/landingpage_assets/asset-1.png",
+        bg: "/images/landingpage_assets/asset-3.png",
+        startBtn: "/images/landingpage_assets/asset-2.png",
+        howBtn: "/images/landingpage_assets/asset-1.png",
       },
 
       {
-        bg: "/christmas-card/images/landingpage_assets/asset-6.png",
-        startBtn: "/christmas-card/images/landingpage_assets/asset-8.png",
-        howBtn: "/christmas-card/images/landingpage_assets/asset-7.png",
+        bg: "/images/landingpage_assets/asset-6.png",
+        startBtn: "/images/landingpage_assets/asset-8.png",
+        howBtn: "/images/landingpage_assets/asset-7.png",
       },
 
       {
-        bg: "/christmas-card/images/landingpage_assets/asset-9.png",
-        startBtn: "/christmas-card/images/landingpage_assets/asset-5.png",
-        howBtn: "/christmas-card/images/landingpage_assets/asset-4.png",
+        bg: "/images/landingpage_assets/asset-9.png",
+        startBtn: "/images/landingpage_assets/asset-5.png",
+        howBtn: "/images/landingpage_assets/asset-4.png",
       },
     ];
 
@@ -236,7 +236,7 @@ window.onload = function () {
       //Present textures
       for (let i = 1; i <= 5; i++) {
         const texture = new PIXI.Texture.from(
-          `/christmas-card/images/present_assets/Present${i}.png`
+          `/images/present_assets/Present${i}.png`
         );
 
         //Store preview blocks in a global array for later usage
@@ -246,7 +246,7 @@ window.onload = function () {
       //Coal textures
       for (let i = 1; i <= 4; i++) {
         const texture = new PIXI.Texture.from(
-          `/christmas-card/images/coal_assets/Coal${i}.png`
+          `/images/coal_assets/Coal${i}.png`
         );
 
         //Store coal blocks in a global array for later usage
@@ -255,7 +255,7 @@ window.onload = function () {
 
       for (let i = 1; i <= 2; i++) {
         const texture = new PIXI.Texture.from(
-          `/christmas-card/images/character_assets/Dice_idle${i}.png`
+          `/images/character_assets/Dice_idle${i}.png`
         );
 
         characterTextures[IDLE].push(texture);
@@ -263,7 +263,7 @@ window.onload = function () {
 
       for (let i = 1; i <= 3; i++) {
         const texture = new PIXI.Texture.from(
-          `/christmas-card/images/character_assets/Dice_left${i}.png`
+          `/images/character_assets/Dice_left${i}.png`
         );
 
         characterTextures[LEFT].push(texture);
@@ -271,7 +271,7 @@ window.onload = function () {
 
       for (let i = 1; i <= 3; i++) {
         const texture = new PIXI.Texture.from(
-          `/christmas-card/images/character_assets/Dice_right${i}.png`
+          `/images/character_assets/Dice_right${i}.png`
         );
 
         characterTextures[RIGHT].push(texture);
@@ -279,7 +279,7 @@ window.onload = function () {
 
       for (let i = 1; i <= 3; i++) {
         const texture = new PIXI.Texture.from(
-          `/christmas-card/images/character_assets/Stun${i}.png`
+          `/images/character_assets/Stun${i}.png`
         );
 
         characterTextures[STUN].push(texture);
@@ -344,7 +344,7 @@ window.onload = function () {
   //load game BG
   function loadBG() {
     const bgTexture = new PIXI.Texture.from(
-      "/christmas-card/images/backgrounds/bg.png"
+      "/images/backgrounds/bg.png"
     );
 
     bg = new PIXI.Sprite(bgTexture);
@@ -789,7 +789,7 @@ window.onload = function () {
     greetingTo.innerHTML = `TO: ${nameTo}`;
     greetingMessage.innerHTML = message;
 
-    let url = `/christmas-card/images${variantUrl}`;
+    let url = `/images${variantUrl}`;
 
     const element = document.createElement("img");
 
