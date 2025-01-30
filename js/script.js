@@ -165,7 +165,7 @@ window.onload = function () {
       // const { data } = await axios.get(`${API_URL}/${id}`);
 
       //Sample data
-      let variantUrl = "/card_assets/carolling.jpg";
+      let variantUrl = "/card_assets/carolling.png";
       let nameFrom = "Kaartiik";
       let nameTo="Anyone";
       let message = "Merry Christmas"
